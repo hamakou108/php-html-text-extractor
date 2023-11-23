@@ -1,0 +1,13 @@
+{
+    "name": "hamakou108/php-html-text-extractor",
+    "autoload": {
+        "psr-4": {
+            "Hamakou108\\PhpHtmlTextExtractor\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "hamakou108"
+        }
+    ]
+}
