@@ -8,6 +8,9 @@ $html = preg_replace('/^[ \t]+/m', '', $html);
 // Remove line break
 $html = str_replace(["\r\n", "\r", "\n"], '', $html);
 
+// Remove unnecessary parts for text extraction
+$html = preg_replace('/<\?php.*?\?>/s', '', $html);
+
 // Except autonomous custom elements and text
 const PHRASING_CONTENT_NAMES = ['a', 'abbr', 'area', 'audio', 'b', 'bdi', 'bdo', 'br', 'button', 'canvas', 'cite', 'code', 'data', 'datalist', 'del', 'dfn', 'em', 'embed', 'i', 'iframe', 'img', 'input', 'ins', 'kbd', 'label', 'link', 'map', 'mark', 'math', 'meta', 'meter', 'noscript', 'object', 'output', 'picture', 'progress', 'q', 'ruby', 's', 'samp', 'script', 'select', 'slot', 'small', 'span', 'strong', 'sub', 'sup', 'svg', 'template', 'textarea', 'time', 'u', 'var', 'video', 'wbr'];
 
